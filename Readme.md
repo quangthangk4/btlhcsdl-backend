@@ -19,7 +19,7 @@ Dự án bao gồm các microservices độc lập, giao tiếp với nhau thôn
 ![Sơ đồ kiến trúc tổng quan](images/microservicesArchitecture.png)
 
 
-
+![img.png](images/img.png)
 
 ## Các Services
 
@@ -58,29 +58,33 @@ Dưới đây là danh sách các service chính trong dự án:
 
 Các service Spring Boot trong dự án thường tuân theo cấu trúc module Maven tiêu chuẩn:
 
-profile-service/
-├── .mvn/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── com/thang/
-│ │ │ ├── event/ # gửi thông điệp kafka cho notification thông qua class NotificationEven.java
-│ │ │ │ └── NotificationEvent.java
-│ │ │ └── profile/
-│ │ │ ├── configuration/ # Chứa các lớp cấu hình (Beans, Security,...)
-│ │ │ ├── controller/ # Các lớp RestController xử lý request HTTP
-│ │ │ ├── dto/ # Data Transfer Objects - Đối tượng truyền dữ liệu giữa các lớp/API
-│ │ │ ├── entity/ # Các lớp ánh xạ với bảng trong cơ sở dữ liệu 
-│ │ │ ├── exception/ # Các lớp xử lý ngoại lệ tùy chỉnh
-│ │ │ ├── mapper/ # Các lớp chuyển đổi giữa DTO và Entity (dùng MapStruct)
-│ │ │ ├── repository/ # Các interface truy cập dữ liệu 
-│ │ │ ├── service/ # Chứa business logic
-│ │ │ └── ProfileApplication.java # Main Class
-│ │ └── resources/
-│ │ ├── application.yaml # Cấu hình ứng dụng
-│ │ └── ... # Các file tài nguyên khác
-│ └── test/ # Chứa mã nguồn cho unit/integration tests
-└── pom.xml # File cấu hình Maven (dependencies, build plugins)
+## 🧩 Profile-Service
+
+📁 profile-service  
+├── 📁 .mvn                # Maven Wrapper cấu hình  
+├── 📁 src  
+│   ├── 📁 main  
+│   │   ├── 📁 java  
+│   │   │   └── 📁 com  
+│   │   │       └── 📁 thang  
+│   │   │           ├── 📁 event          # Gửi Kafka event (NotificationEvent.java)  
+│   │   │           └── 📁 profile  
+│   │   │               ├── 📁 configuration  # Cấu hình Beans, Security, ...  
+│   │   │               ├── 📁 controller     # RestController xử lý HTTP request  
+│   │   │               ├── 📁 dto            # DTO – truyền dữ liệu giữa lớp/API  
+│   │   │               ├── 📁 entity         # Entity ánh xạ với DB  
+│   │   │               ├── 📁 exception      # Xử lý ngoại lệ tùy chỉnh  
+│   │   │               ├── 📁 mapper         # Dùng MapStruct chuyển DTO <-> Entity  
+│   │   │               ├── 📁 repository     # Truy cập dữ liệu  
+│   │   │               ├── 📁 service        # Business logic  
+│   │   │               └── 📄 ProfileApplication.java  # Main class  
+│   │   └── 📁 resources  
+│   │       ├── 📄 application.yaml          # Cấu hình ứng dụng  
+│   │       └── 📄 ...                        # Các tài nguyên khác  
+│   └── 📁 test          # Unit/Integration test  
+└── 📄 pom.xml           # Maven cấu hình dependencies/build plugins
+
+
 
 
 ## Yêu cầu cài đặt
