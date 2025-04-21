@@ -18,15 +18,14 @@ import java.util.List;
 @RequiredArgsConstructor
 @EnableWebFluxSecurity
 public class SecurityConfig {
-    private final ObjectMapper objectMapper;
-
     public String[] PUBLIC_ENDPOINTS = {
             "/api/profile/users/registration",
+            "/api/notification/email/send",
     };
 
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
-        CustomServerAuthenticationEntryPoint customEntryPoint = new CustomServerAuthenticationEntryPoint(objectMapper);
+        CustomServerAuthenticationEntryPoint customEntryPoint = new CustomServerAuthenticationEntryPoint(new ObjectMapper());
 
         http.authorizeExchange(exchange -> exchange.pathMatchers(PUBLIC_ENDPOINTS).permitAll()
                 .anyExchange().authenticated()

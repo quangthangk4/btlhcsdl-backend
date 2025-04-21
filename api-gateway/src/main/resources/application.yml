@@ -17,6 +17,12 @@ spring:
             - Path=${app.prefix_api}/profile/**
           filters:
             - StripPrefix=1
+        - id: notification_service
+          uri: http://localhost:8082
+          predicates:
+            - Path=${app.prefix_api}/notification/**
+          filters:
+            - StripPrefix=1
 
   security:
     oauth2:
