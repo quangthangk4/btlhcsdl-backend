@@ -122,4 +122,9 @@ public class ProfileService {
         String[] split = url.split("/");
         return split[split.length - 1];
     }
+
+    public ProfileResponse getUserProfile(String userId){
+        Profile profile = profileRepository.findByUserId(userId).orElseThrow(() -> new AppException(ErrorCode.PROFILE_NOT_FOUND));
+        return profileMapper.toProfileResponse(profile);
+    }
 }

@@ -36,4 +36,11 @@ public class ProfileController {
                 .result(profileService.getProfile())
                 .build();
     }
+
+    @GetMapping("/{userId}")
+    public ApiResponse<ProfileResponse> getProfile(@PathVariable String userId) {
+        return ApiResponse.<ProfileResponse>builder()
+                .result(profileService.getUserProfile(userId))
+                .build();
+    }
 }
