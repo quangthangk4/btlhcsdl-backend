@@ -9,6 +9,16 @@ spring:
     mongodb:
       uri: mongodb://root:root@localhost:27017/post-service?authSource=admin
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/social_media
+idp:
+  url: http://localhost:8180
+  client-id: social_app
+  client-secret: It9ar58VqpWG7ITE1EKsxsmYZ9EASeoI
+
 app:
   services:
     profile:

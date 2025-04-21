@@ -14,11 +14,6 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8180/realms/social_media
 
   neo4j:
     uri: bolt://localhost:7687
@@ -26,6 +21,11 @@ spring:
       username: neo4j
       password: 12345678
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/social_media
 idp:
   url: http://localhost:8180
   client-id: social_app
