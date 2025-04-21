@@ -25,6 +25,8 @@ Dự án bao gồm các microservices độc lập, giao tiếp với nhau thôn
 ![img.png](images/img2.png)
 
 ## Các Services
+* Service-to-service communication using Spring OpenFeign
+* Each service has integrated Keycloak for authentication and authorization
 
 Dưới đây là danh sách các service chính trong dự án:
 
@@ -162,4 +164,4 @@ Các service Spring Boot trong dự án thường tuân theo cấu trúc module 
 * youtube: ```https://www.youtube.com/watch?v=fgfUby7qnWM&list=PL2xsxmVse9Ibud7tJn5dqJDUAVCg2Olyi&index=1```
 * api keycloak: ```https://www.keycloak.org/docs-api/latest/rest-api/index.html```
 * cloud gateway: ```https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway/request-predicates-factories.html```
-* 
+* spring security: ```https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html```
