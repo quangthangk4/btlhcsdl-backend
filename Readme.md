@@ -60,6 +60,7 @@ Các service Spring Boot trong dự án thường tuân theo cấu trúc module 
 
 ## 🧩 Profile-Service
 
+```
 📁 profile-service  
 ├── 📁 .mvn                # Maven Wrapper cấu hình  
 ├── 📁 src  
@@ -83,7 +84,7 @@ Các service Spring Boot trong dự án thường tuân theo cấu trúc module 
 │   │       └── 📄 ...                        # Các tài nguyên khác  
 │   └── 📁 test          # Unit/Integration test  
 └── 📄 pom.xml           # Maven cấu hình dependencies/build plugins
-
+```
 
 
 
