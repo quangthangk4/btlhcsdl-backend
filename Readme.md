@@ -17,12 +17,18 @@
 
 Dự án bao gồm các microservices độc lập, giao tiếp với nhau thông qua Spring cloud gateway, đóng vai trò là điểm vào (entry point) cho các request từ client, định tuyến chúng đến các service phù hợp. Keycloak được sử dụng để quản lý định danh và phân quyền (Authentication & Authorization). `docker-compose.yml` được dùng để quản lý và khởi chạy các service trong môi trường local bằng Docker.
 
+* sơ đồ kiến trúc tổng quan về microservice
 ![Sơ đồ kiến trúc tổng quan](images/microservicesArchitecture.png)
 
-
+* sơ đồ kiến trúc về dự án
 ![img.png](images/img.png)
 
+* sơ đồ cách hoạt động của keycloak
 ![img.png](images/img2.png)
+
+* cách hoạt động của kafka
+
+    ![img.png](images/img3.png)
 
 ## Các Services
 * Service-to-service communication using Spring OpenFeign
