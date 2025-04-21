@@ -15,6 +15,7 @@ import com.thang.profile.mapper.ProfileMapper;
 import com.thang.profile.repository.ProfileRepository;
 import com.thang.profile.repository.keyCloakClient.KeyCloakClient;
 import feign.FeignException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -59,7 +60,7 @@ public class ProfileService {
         return profileMapper.toProfileResponse(profile);
     }
 
-
+    @Transactional
     public ProfileResponse createProfile(ProfileCreationRequest request){
         try {
             // create account from keycloak
