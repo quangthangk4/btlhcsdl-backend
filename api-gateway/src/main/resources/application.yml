@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+app:
+  prefix_api: /api
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: profile-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=${app.prefix_api}/profile/**
+          filters:
+            - StripPrefix=1
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/social_media
+
+idp:
+  url: http://localhost:8180
+  client-id: social_app
+  client-secret: It9ar58VqpWG7ITE1EKsxsmYZ9EASeoI
+
+
+
