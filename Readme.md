@@ -11,6 +11,7 @@
 - [Yêu cầu cài đặt](#yêu-cầu-cài-đặt)
 - [Hướng dẫn cài đặt và chạy](#hướng-dẫn-cài-đặt-và-chạy)
 - [Cấu hình Keycloak](#cấu-hình-keycloak)
+- [Tài liệu tham khảo](#tài-liệu-tham-khảo)
 
 ## Kiến trúc
 
@@ -20,6 +21,8 @@ Dự án bao gồm các microservices độc lập, giao tiếp với nhau thôn
 
 
 ![img.png](images/img.png)
+
+![img.png](images/img2.png)
 
 ## Các Services
 
@@ -154,3 +157,9 @@ Các service Spring Boot trong dự án thường tuân theo cấu trúc module 
 *   Xem chi tiết cấu hình Keycloak trong file `docker-compose.yml` của từng service.
 
 ---
+
+## tài liệu tham khảo
+* youtube: ```https://www.youtube.com/watch?v=fgfUby7qnWM&list=PL2xsxmVse9Ibud7tJn5dqJDUAVCg2Olyi&index=1```
+* api keycloak: ```https://www.keycloak.org/docs-api/latest/rest-api/index.html```
+* cloud gateway: ```https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway/request-predicates-factories.html```
+* 
